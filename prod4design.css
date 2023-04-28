@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Kaushan Script';
+  src: url('kaushan-script.otf');
+}
+body {
+  background-image: url('grabowska-4207620.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.product {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffcad5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin-top: 50px; /* add margin-top to push the product down */
+  position: relative; /* add position relative to enable absolute positioning for the pseudo-element */
+}
+
+
+
+.product::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.image-container {
+  flex: 1;
+  position: relative;
+  z-index: 1; /* add z-index to bring the image in front of the pseudo-element */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.details-container {
+  flex: 1;
+  padding: 2rem;
+  position: relative;
+  z-index: 1; /* add z-index to bring the details in front of the pseudo-element */
+}
+
+h2 {
+  margin: 0;
+  font-size: rem;
+  font-weight: 500;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.description {
+  margin:auto;
+  font-size:0.85rem;
+  line-height: 1.5;
+}
+
+.price {
+  margin: 0.6rem ;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+select {
+  display: block;
+  width: 25%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.add-to-cart {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #da4f7d;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #e26d9a;
+}
+
+.product-reviews {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #F3F3F3;
+
+}
+
+.product-reviews h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #555555;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.product-reviews ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-reviews li {
+  margin-bottom: 2rem;
+  border-left: 4px solid #DA4F7D;
+  padding-left: 1rem;
+}
+
+.product-reviews li:last-child {
+  margin-bottom: 0;
+}
+
+.product-reviews h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #DA4F7D;
+}
+
+.product-reviews p {
+
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555555;
+}
+
+.review-stars {
+  color: rgb(218, 194, 58);
+  }
+.product-reviews .review-stars {
+  /*color: #DA4F7D;*/
+  color: rgb(218, 194, 58);
+  margin-right: 0.5rem;
+}
