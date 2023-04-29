@@ -14,7 +14,7 @@ User can place an order by providing the required details.
 Clone the repository to your local machine.
 bash
 Copy code
-git clone https://github.com/khushboojain01/fiore.git
+git clone https://github.com/khushboojain01/Fiore.git
 
 Install XAMPP and start the Apache and MySQL services.
 Create a new database named fiore in phpMyAdmin.
